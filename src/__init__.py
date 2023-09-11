@@ -7,7 +7,7 @@ bl_info = {
     "author" : "Adam Chivers",
     "description" : "",
     "blender" : (2, 90, 0),
-    "version" : (1, 0),
+    "version" : (1, 1),
     "location" : "",
     "warning" : "",
     "category" : "Generic"
@@ -36,7 +36,6 @@ def unregister():
         bpy.utils.unregister_class(c)
 
     for m in modules:
-        reload(m)
         m.unregister()
 
 
